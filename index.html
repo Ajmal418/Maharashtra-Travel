@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Roboto&display=swap');
+
+    *{
+       padding: 0;
+       margin: 0;
+       font-family: 'Poppins', sans-serif;       
+    }
+    body{
+        min-height: 100vh;
+    }
+    
+    .backImage{
+        background-image: url('https://www.tourmyindia.com/luxury-train-tours/wp-content/uploads/2018/08/schedulebanner.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        aspect-ratio: 16/9;
+        z-index: 999;
+        bottom: 0;
+        position: relative;
+    }
+
+    
+    
+    .mainBar{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin-bottom: 0px !important;
+        background-color: aliceblue;
+        height:3rem ;
+        border-bottom: 2px solid lightgray;
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        overflow: hidden;
+    }
+    nav > ul > li  {         
+        list-style: none;
+        height: 30px;
+
+    }
+    .mainBar li > a {
+        text-decoration: none;
+        height: 100%;
+        padding: 0 25px;
+        display: flex;
+        align-items: center;
+        color:black;        
+       
+      
+
+    }
+    
+    .mainBar > li > a:hover {
+        
+        background-color: lightgray;
+        color: white;
+    }
+    .mainBar > li:first-child{
+        margin-right: auto;
+    }
+    .sidebar{        
+        padding-left: 0px !important;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.603);
+        backdrop-filter: blur(1px);
+        z-index:999;
+        position: fixed;
+        top:0;
+        left:0;
+        display:none;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        transition: example 1s;
+    }
+    @keyframes example {
+  0%   {width: 25%;}
+  25%  {width: 50%;}
+  50%  {width: 75%;}
+  100% {width: 100%;}
+}
+    
+.sidebar > li > a {
+    color: white; 
+    text-wrap: nowrap;
+    text-decoration: none;
+}
+.sidebar> li:hover {
+    background-color: aqua;
+
+}
+.hamburger{
+    font-size: 1.5rem;
+}
+.cross{
+    position: relative;
+    left: 8rem;
+    top: 1rem;
+    font-size: 1.5rem;
+}
+@media  (max-width:576px){
+        
+    .mainBar > li > a:hover {
+        background-color: none;
+        color: none;
+    }
+}
+</style>
+<body>
+    <section>
+        <div class="backImage">
+            <nav>
+                <ul class="sidebar">
+                    <li onclick="closeSideBar()" class="cross"><a href="javascript:void(0)"><i class="fa-solid fa-xmark"></i></a></li>
+                    <li><a href="javascript:void(0)">Home</a></li>
+                    <li><a href="javascript:void(0)">about</a></li>
+                    <li><a href="javascript:void(0)">contact</a></li>
+                </ul>
+                <ul class="mainBar">
+                    <li><a href="javascript:void(0)">Maharastra Travel</a></li>
+                    <li class="d-none d-md-block d-lg-block d-xl-block"><a href="javascript:void(0)">Home</a></li>
+                    <li class="d-none d-md-block d-xl-block"><a href="javascript:void(0)">about</a></li>
+                    <li class="d-none d-md-block d-xl-block"><a href="javascript:void(0)">contact</a></li>
+                    <li onclick="showSideBar()" class="d-block d-md-none d-xl-none"><a href="javascript:void(0)" class="hamburger"><i class="fa-solid fa-bars"></i></a></li>
+                </ul>
+               </nav> 
+          
+        
+           </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque delectus eos vero voluptatum, dolorem temporibus atque ratione a quasi totam veritatis ut earum laudantium reprehenderit at saepe modi enim </unde!lorem>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat? Et provident nam dignissimos minus itaque tempora explicabo aperiam consectetur sit, ea voluptatibus qui consequatur ipsam est, architecto accusantium ut!
+                    Placeat sapiente ab hic quae debitis ea ipsum soluta ad itaque iusto, odit quos incidunt? Mollitia suscipit voluptates quos, omnis illo totam et nostrum reprehenderit laudantium rerum iusto dolorem sed.
+                    Suscipit temporibus enim delectus minus accusantium porro iure itaque doloremque, repudiandae voluptas voluptatum nobis unde reiciendis facilis incidunt et molestiae placeat consectetur id dolores expedita quibusdam. Molestiae porro perspiciatis cumque.
+                    Molestias hic quis laborum voluptas quisquam illo, laboriosam ipsum blanditiis reiciendis sapiente dolores eligendi voluptatem autem temporibus tempore minima itaque assumenda, consequatur ea eveniet inventore. Provident incidunt animi omnis error.
+                    Doloremque distinctio veritatis facilis ipsum tenetur nisi, labore dicta dolorum. Assumenda deleniti repudiandae veniam explicabo rem vel recusandae hic placeat nisi optio molestias enim sapiente itaque exercitationem, illum obcaecati omnis.
+                    Suscipit, minus enim reprehenderit neque dolorem excepturi incidunt ab deserunt qui quaerat illo recusandae accusamus consequuntur animi impedit sunt debitis ducimus repellendus eos quas. Eum error dolore incidunt sint molestiae!
+                    Iusto ducimus eveniet minus placeat veniam quis facilis nemo? Repudiandae dolores sed, reprehenderit inventore libero voluptatem possimus earum omnis maxime deserunt minus. Aut temporibus ratione quae? Libero tempora perspiciatis provident?
+                    Saepe neque, quidem deserunt totam, ut sapiente nihil aliquam aspernatur nostrum nobis quasi excepturi sequi vel similique accusamus. Iure blanditiis doloremque quaerat magnam libero ratione, temporibus fugiat harum debitis aperiam.
+                    In asperiores deleniti beatae tempore assumenda minima unde quaerat molestias, labore eligendi, amet repudiandae accusamus voluptas nemo doloribus quia ad fugit vel necessitatibus? Doloribus at quia atque quam ut. Sunt.
+                    Doloremque ea laudantium, deserunt quod ex enim illum totam maiores sequi officia dolor minus a placeat distinctio repellendus vel debitis voluptas? Ullam, qui. Nobis numquam hic dolorem, quaerat incidunt aspernatur.
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container-fluid">
+                <div class="row">
+                    <ul>
+                        <li><a href="">link</a></li>
+                        <li><a href="">link</a></li>
+                        <li><a href="">link</a></li>
+                        <li><a href="">link</a></li>
+                    </ul>
+                </div>
+
+            
+        </div>
+    </section>
+</body>
+<script>
+    let mainBar= document.querySelector('.mainBar')      
+    let cross= document.querySelector('.sidebar')      
+    showSideBar=()=>{
+            cross.style.display='flex';
+            mainBar.style.zIndex='1';
+            
+        }
+        closeSideBar=()=>{
+                
+            mainBar.style.zIndex='999';
+            cross.style.display='none';
+    }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
