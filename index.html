@@ -121,6 +121,20 @@
     display: flex;
     align-items: center;
 }
+.herosection{
+    text-align: center;    
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #d51c1c5e;
+    color: wheat;   
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+    width: 50%;
+}
+
 @media  (max-width:576px){
         
     .mainBar > li > a:hover {
@@ -147,14 +161,16 @@
                     <li onclick="showSideBar()" class="d-block d-md-none d-xl-none"><a href="javascript:void(0)" class="hamburger"><i class="fa-solid fa-bars"></i></a></li>
                 </ul>
                </nav> 
-          
-        
+               <div class="herosection">
+                    <h1>make you travel happy maharastra travel</h1>
+               </div>
+               
            </div>
     </section>
     <section>
         <div class="container">
-            <div class="row">
-                <div  class="row row-cols-2 ">
+            <div class="p-2">
+                <div  class="row row-cols-1 row-cols-lg-2 row-cols-md-2">
                    <form action=""  class="col">
                     <div>
                         <label for="" class="form-lable">Name</label>
@@ -178,7 +194,7 @@
                           </div>
                     </div>
                     <div>
-                       <button class="btn btn-primary">submit</button>
+                       <button class="btn btn-primary mt-2">submit</button>
                     </div>
                    </form>
                    <div class="col">
