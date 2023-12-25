@@ -18,6 +18,9 @@
     body{
         min-height: 100vh;
     }
+    ul > li >a {
+        text-decoration: none;
+    }
     
     .backImage{
         background-image: url('https://www.tourmyindia.com/luxury-train-tours/wp-content/uploads/2018/08/schedulebanner.jpg');
@@ -111,6 +114,13 @@
     top: 1rem;
     font-size: 1.5rem;
 }
+
+.footerIcone {
+    gap: 2rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
 @media  (max-width:576px){
         
     .mainBar > li > a:hover {
@@ -144,19 +154,36 @@
     <section>
         <div class="container">
             <div class="row">
-                <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque delectus eos vero voluptatum, dolorem temporibus atque ratione a quasi totam veritatis ut earum laudantium reprehenderit at saepe modi enim </unde!lorem>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, placeat? Et provident nam dignissimos minus itaque tempora explicabo aperiam consectetur sit, ea voluptatibus qui consequatur ipsam est, architecto accusantium ut!
-                    Placeat sapiente ab hic quae debitis ea ipsum soluta ad itaque iusto, odit quos incidunt? Mollitia suscipit voluptates quos, omnis illo totam et nostrum reprehenderit laudantium rerum iusto dolorem sed.
-                    Suscipit temporibus enim delectus minus accusantium porro iure itaque doloremque, repudiandae voluptas voluptatum nobis unde reiciendis facilis incidunt et molestiae placeat consectetur id dolores expedita quibusdam. Molestiae porro perspiciatis cumque.
-                    Molestias hic quis laborum voluptas quisquam illo, laboriosam ipsum blanditiis reiciendis sapiente dolores eligendi voluptatem autem temporibus tempore minima itaque assumenda, consequatur ea eveniet inventore. Provident incidunt animi omnis error.
-                    Doloremque distinctio veritatis facilis ipsum tenetur nisi, labore dicta dolorum. Assumenda deleniti repudiandae veniam explicabo rem vel recusandae hic placeat nisi optio molestias enim sapiente itaque exercitationem, illum obcaecati omnis.
-                    Suscipit, minus enim reprehenderit neque dolorem excepturi incidunt ab deserunt qui quaerat illo recusandae accusamus consequuntur animi impedit sunt debitis ducimus repellendus eos quas. Eum error dolore incidunt sint molestiae!
-                    Iusto ducimus eveniet minus placeat veniam quis facilis nemo? Repudiandae dolores sed, reprehenderit inventore libero voluptatem possimus earum omnis maxime deserunt minus. Aut temporibus ratione quae? Libero tempora perspiciatis provident?
-                    Saepe neque, quidem deserunt totam, ut sapiente nihil aliquam aspernatur nostrum nobis quasi excepturi sequi vel similique accusamus. Iure blanditiis doloremque quaerat magnam libero ratione, temporibus fugiat harum debitis aperiam.
-                    In asperiores deleniti beatae tempore assumenda minima unde quaerat molestias, labore eligendi, amet repudiandae accusamus voluptas nemo doloribus quia ad fugit vel necessitatibus? Doloribus at quia atque quam ut. Sunt.
-                    Doloremque ea laudantium, deserunt quod ex enim illum totam maiores sequi officia dolor minus a placeat distinctio repellendus vel debitis voluptas? Ullam, qui. Nobis numquam hic dolorem, quaerat incidunt aspernatur.
-                    
+                <div  class="row row-cols-2 ">
+                   <form action=""  class="col">
+                    <div>
+                        <label for="" class="form-lable">Name</label>
+                        <input type="text" class="form-control">
+                        <span class="text-danger" id=""></span>
+                    </div>
+                    <div>
+                        <label for="" class="form-lable">Mobile</label>
+                        <input type="text" class="form-control">
+                        <span class="text-danger" id=""></span>
+                    </div>
+                    <div>
+                        <label for="" class="form-lable">Email</label>
+                        <input type="text" class="form-control">
+                        <span class="text-danger" id=""></span>
+                    </div>
+                    <div>
+                        <div class="form-floating mt-3">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                            <label for="floatingTextarea2">Message</label>
+                          </div>
+                    </div>
+                    <div>
+                       <button class="btn btn-primary">submit</button>
+                    </div>
+                   </form>
+                   <div class="col">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae praesentium facilis, blanditiis nam reprehenderit tempore dignissimos cumque. Assumenda similique nobis nemo quibusdam incidunt? Dolor deleniti voluptatibus aliquam nulla cumque odit?
+                   </div>                    
                 </div>
 
             </div>
@@ -165,17 +192,16 @@
     <section class="footer">
         <div class="container-fluid">
                 <div class="row">
-                    <ul>
-                        <li><a href="">link</a></li>
-                        <li><a href="">link</a></li>
-                        <li><a href="">link</a></li>
-                        <li><a href="">link</a></li>
-                    </ul>
+                    <div class="footerIcone">
+                        <a href=""><img src="/images/whatsapp_icon.png" alt="whatsapp_icon" class="socialIcone" ></a>
+                        <a href=""><img src="/images/instagram_icon.png" alt="instagram_icon" class="socialIcone"></a>
+                        <a href=""><img src="/images/facebook_icon.png" alt="facebook_icon" class="socialIcone"></a>
+                        <a href=""><img src="/images/youtube_icon.png" alt="youtube_icon" class="socialIcone"></a>                             
+                    </div>
+                    <span class="text-center mt-3">Develop by ajmal </span>
                 </div>
-
-            
-        </div>
-    </section>
+            </div>
+    </section>  
 </body>
 <script>
     let mainBar= document.querySelector('.mainBar')      
