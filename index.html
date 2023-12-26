@@ -201,13 +201,13 @@
                        
                        
                         <div class="rat">
-                            <span  onclick="rating('first')" class="fa fa-star fs-6" id="first"  value="1"></span>
-                            <span  onclick="rating('second')" class="fa fa-star fs-6"  id="second" value="2"></span>
-                            <span  onclick="rating('third')" class="fa fa-star fs-6" id="third" value="3"></span>
-                            <span  onclick="rating('fourth')" class="fa fa-star fs-6" id="fourth" value="4"></span>
-                            <span  onclick="rating('fifth')" class="fa fa-star fs-6" id="fifth" value="5"></span>
-                            <input type="hidden" value="0">    
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
                         </div>
+                        <p class="current-rating">0 of 5</p>
                        <button class="btn btn-primary mt-2">submit</button>
                     </div>
                    </form>
@@ -246,16 +246,23 @@
             mainBar.style.zIndex='999';
             cross.style.display='none';
     }
-        let array=[];
-    let  rating= (a)=>{
-        let rati=document.querySelector(`#${a}`);
-            rati.classList.toggle('checked');
-            value=rati.getAttribute('value');           
-            array.push(parseInt(value));
-            // console.log(array)
-            console.log(value)
-        }
-
+      
+    let a =document.querySelectorAll('.fa');
+    let value =document.querySelector('.current-rating')
+    a.forEach((values,key)=>{
+        values.addEventListener('click',()=>{         
+            count =key+1
+            value.innerHTML=`${count} of 5`;
+            a.forEach((star,i)=>{
+                if(count>=i+1){
+                    star.classList.add('checked')                 
+                }else{
+                   star.classList.remove('checked')
+                }
+               
+            })
+        }); 
+    })
 
 </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
