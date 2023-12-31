@@ -71,67 +71,72 @@ data.forEach((value , key)=>{
             const rating_error   = document.getElementById('rating_error')
             const mobile_error  = document.getElementById('mobile_error')
             const email_error   = document.getElementById('email_error')
-            // const gcaptcha      = document.getElementById('g-recaptcha_error')
+            const gcaptcha      = document.getElementById('g-recaptcha_error')
         
            
             if(name==''){         
-                name_error.classList.remove('d-none')
-                return false;
-            }else{
-                name_error.classList.add('d-none')
+                    name_error.classList.remove('d-none')
+                    return false;
+                }else{
+                    name_error.classList.add('d-none')
 
             }
             if(mobile==''){        
-                mobile_error.classList.remove('d-none')
-                return false;
-            }else{
-                mobile_error.classList.add('d-none')
+                    mobile_error.classList.remove('d-none')
+                    return false;
+                }else{
+                    mobile_error.classList.add('d-none')
 
             }
             if(email=='' ){        
-                email_error.classList.remove('d-none')
-                return false;
-            }else{
-                email_error.classList.add('d-none')
+                    email_error.classList.remove('d-none')
+                    return false;
+                }else{
+                    email_error.classList.add('d-none')
 
             }
             if(rating=='' ){        
-                rating_error.classList.remove('d-none')
-                return false;
-            }else{
-                rating_error.classList.add('d-none')
+                    rating_error.classList.remove('d-none')
+                    return false;
+                }else{
+                    rating_error.classList.add('d-none')
 
             }        
             if(!validatEmail(email)){        
-                email_error.classList.remove('d-none')
-                email_error.innerHTML='please enter valid email address'
-                return false
-                
-            }else{
-                email_error.classList.add('d-none')
+                    email_error.classList.remove('d-none')
+                    email_error.innerHTML='please enter valid email address'
+                    return false
+                    
+                }else{
+                    email_error.classList.add('d-none')
 
             }
-            // if(grecaptcha.getResponse()=='' ){        
-            //     gcaptcha.classList.remove('d-none')
-            //     gcaptcha.classList.add('d-block')
-            //     return false;
-            // }     
+            if(grecaptcha.getResponse()=='' ){        
+                gcaptcha.classList.remove('d-none')
+                gcaptcha.classList.add('d-block')
+                return false;
+            }     
         
             const hey= document.getElementById('forms') 
             const  data = new  FormData(hey) 
-            sendEmail(email,name);
+           
+            // sendEmail(email,name);
             
-            // try {
-            //     response =   fetch('/railway/captcha.php',{
-            //     method:'post',
-            //     body:data,
-            
-            //  }).then( res=>res.json()).then(json=>{
-            //     console.log(json)
-            //  })
-            // } catch (error) {
-            //     console.log(error)
-            // }
+            try {
+                response =   fetch('phpmail.php',{
+                method:'post',
+                body:data,
+                
+              
+             }).then((response)=>{
+                
+                  return  response.json()
+             }).then((data)=>{
+                console.log(data)
+             })
+            } catch (error) {
+                console.log(error)
+            }
             
 
         })  
