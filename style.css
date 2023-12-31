@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&family=Roboto&display=swap');
+
+*{
+   padding: 0;
+   margin: 0;
+   font-family: 'Poppins', sans-serif;       
+}
+body{
+    min-height: 100vh;
+}
+ul > li >a {
+    text-decoration: none;
+}
+
+.backImage{
+    background-image: url('https://www.tourmyindia.com/luxury-train-tours/wp-content/uploads/2018/08/schedulebanner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 16/9;
+    z-index: 999;
+    bottom: 0;
+    position: relative;
+}
+
+
+
+.mainBar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 0px !important;
+    transition: 0.3s ease-in-out;
+    height:3rem ;
+    z-index: 999;
+    width: 100%;
+    overflow: hidden;
+}
+.in_active{
+    background-color: aliceblue;
+    border-bottom: 2px solid lightgray;
+    box-shadow: 5px -1px 12px -5px grey;
+}
+.in_active > li > a {
+    color: black !important;
+    transition: all ease 0.3ms;
+}
+nav > ul > li  {         
+    list-style: none;
+    height: 30px;
+
+}
+.mainBar li > a {
+    text-decoration: none;
+    height: 100%;
+    padding: 0 25px;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    align-items: center;
+    color:white;        
+   
+  
+
+}
+
+.mainBar > li > a:hover {
+    
+    background-color: lightgray;
+    color: white;
+}
+.mainBar > li:first-child{
+    margin-right: auto;
+}
+.sidebar{        
+    padding-left: 0px !important;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.603);
+    backdrop-filter: blur(1px);
+    z-index:999;
+   display:none;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    transition: example 1s;
+}
+@keyframes example {
+0%   {width: 25%;}
+25%  {width: 50%;}
+50%  {width: 75%;}
+100% {width: 100%;}
+}
+
+.sidebar > li > a {
+color: white; 
+font-size: 1.25rem;
+font-weight: 500;
+font-feature-settings: "abvm";
+text-wrap: nowrap;
+text-decoration: none;
+}
+.sidebar> li:hover {
+background-color: aqua;
+
+}
+.hamburger{
+font-size: 1.5rem;
+}
+.cross{
+position: relative;
+left: 8rem;
+top: 1rem;
+font-size: 1.5rem;
+}
+
+.footerIcone {
+gap: 2rem;
+justify-content: center;
+display: flex;
+align-items: center;
+}
+.herosection{
+text-align: center;    
+position: relative;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background: #d51c1c5e;
+color: wheat;   
+display: flex;
+justify-content: center;
+backdrop-filter: blur(2px);
+width: 50%;
+}
+.checked{
+color: orange;
+}
+
+@media  (max-width:576px){
+        
+.mainBar > li > a:hover {
+    background-color: none;
+    color: none;
+}
+ ul {
+    padding-left: 0 !important;
+}
+.herosection > h1 {
+    font-size: 1rem;
+}
+}
